@@ -1,0 +1,7 @@
+Next:
+1. Combine all episodes from all chuncks of the EMR data
+2. Check - why #of serial episodes = #of parallel episodes.
+3. change - the stream to entire data (time runs and note memory required - guppy, objgraph )
+	e.g. from guppy import hpy; h = hpy(); h.heap()
+
+4. 

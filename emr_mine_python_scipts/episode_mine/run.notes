@@ -1,0 +1,114 @@
+
+Loading episodes from: ../../emr_results/all-data-lift-10
+Lines read: 25129
+Parallel episodes loaded:  3416
+Loaded 2-size episodes: 3416
+Mining parallel episodes
+Done.
+
+
+Feb 9:
+2-node episode filtering:
+1. support 0.0001, lift 5.0:
+(2-node, 1-node) episodes =  (48022, 4416)
+2. support 0.0001, lift 10.0:
+(2-node, 1-node) episodes = (25129, 4085) ---- work with this
+
+EMR data summary:
+Time taken = 660.45
+Number of patients = 1620552
+Number of codes = 21945
+Number of Px/Dx codes PX = 38948428, DX = 41192825, EXP = 38196
+Total number of records 80179449
+Number of bad records = 0
+
+
+
+SEQUENCE of EXECUTION:
+1. episode_miner.py - Filter out 2-node episodes with an expiry time constraint
+2. parallel_episode_miner.py - Run level-wise frequent episode mining
+3. track_serial_orders.py - Generate all serial episodes from a given parallel episode
+4. EMRVisualization.jar - Load serial orders to generate partial-orders
+
+
+
+
+On Feb 6: parallel_episode_miner.py
+    settings = {    'expiry'  : 200, #in days (see episode_miner)
+                    'support' : 0.00001   }
+
+Loading episodes from: ../../emr_results/Pts_1_to_150000
+Lines: 25063
+Loaded 2-size episodes: 25063
+Mining parallel episodes
+Generating candidates for level 3
+Number of 3-size candidates = 53454
+Time taken = 4.28 sec
+Counting 53454 3-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 339.58 sec
+Writing 3-size frequent episodes to ../../emr_results/Pts_1_to_150000/3-node.txt
+Generating candidates at level 3
+Number of 4-size candidates = 71310
+Time taken = 3.75 sec
+Counting 71310 4-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 557.48 sec
+Writing 4-size frequent episodes to ../../emr_results/Pts_1_to_150000/4-node.txt
+Generating candidates at level 4
+Number of 5-size candidates = 51850
+Time taken = 3.10 sec
+Counting 51850 5-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 542.94 sec
+Writing 5-size frequent episodes to ../../emr_results/Pts_1_to_150000/5-node.txt
+Generating candidates at level 5
+Number of 6-size candidates = 24878
+Time taken = 1.65 sec
+Counting 24878 6-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 376.66 sec
+Writing 6-size frequent episodes to ../../emr_results/Pts_1_to_150000/6-node.txt
+Generating candidates at level 6
+Number of 7-size candidates = 8869
+Time taken = 0.68 sec
+Counting 8869 7-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 208.22 sec
+Writing 7-size frequent episodes to ../../emr_results/Pts_1_to_150000/7-node.txt
+Generating candidates at level 7
+Number of 8-size candidates = 2062
+Time taken = 0.15 sec
+Counting 2062 8-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 101.26 sec
+Writing 8-size frequent episodes to ../../emr_results/Pts_1_to_150000/8-node.txt
+Generating candidates at level 8
+Number of 9-size candidates = 258
+Time taken = 0.02 sec
+Counting 258 9-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 72.92 sec
+Writing 9-size frequent episodes to ../../emr_results/Pts_1_to_150000/9-node.txt
+Generating candidates at level 9
+Number of 10-size candidates = 8
+Time taken = 0.00 sec
+Counting 8 10-size candidate episodes...
+Reading file: ../../emrdata/Pts_1_to_150000.txt.cleaned
+Frequency threshold (149756 x 0.000010) = 1.497560
+Time taken = 69.69 sec
+Writing 10-size frequent episodes to ../../emr_results/Pts_1_to_150000/10-node.txt
+Generating candidates at level 10
+Number of 11-size candidates = 0
+Time taken = 0.00 sec
+Counting 0 11-size candidate episodes...
+Frequency threshold (0 x 0.000010) = 0.000000
+Time taken = 0.00 sec
+Done.
